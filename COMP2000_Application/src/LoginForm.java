@@ -1,8 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
+import java.awt.event.*;
+import java.util.ArrayList.*;
 
 public class LoginForm extends JFrame{
     private JButton btnClear;
@@ -16,8 +15,21 @@ public class LoginForm extends JFrame{
     private JPanel pwdFieldPasswordPanel;
     private JPanel buttonsPanel;
 
-    adminAccount[] userLogins = new adminAccount[2];
+    static loginAccount[] accountsDatabase = new loginAccount[2];
 
+    static loginAccount userAdmin = new loginAccount("admin", "admin");
+    static loginAccount userReece = new loginAccount("rtarrant", "w4RN3veRch4nG35");
+
+
+    public static void main (String[] args)
+    {
+        LoginForm page = new LoginForm("Admin Login");
+        page.setVisible(true);
+        //System.out.println("Test");
+
+        accountsDatabase[0] = userAdmin;
+        accountsDatabase[1] = userReece;
+    }
 
 
     public LoginForm(String title)
@@ -40,18 +52,29 @@ public class LoginForm extends JFrame{
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                for(int i = 0; i < accountsDatabase.length; i++)
+                {
+                    if(accountsDatabase[i].username.equals(txtUsername.getText()))
+                    {
+                        if(accountsDatabase[i].password.equals(pwdFieldPassword.getPassword().toString()))
+                        {
+                            System.out.println("Match found!");
+                        }
 
+                        else
+                        {
+                            System.out.println("Match not found!");
+                        }
+                    }
+
+                    else
+                    {
+                        System.out.println("Match not found!");
+                    }
+                }
             }
         });
     }
-
-    public static void main (String[] args)
-    {
-        LoginForm page = new LoginForm("Admin Login");
-        page.setVisible(true);
-        //System.out.println("Test");
-    }
-
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
