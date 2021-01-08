@@ -31,7 +31,6 @@ public class LoginForm extends JFrame{
         accountsDatabase[1] = userReece;
     }
 
-
     public LoginForm(String title)
     {
         super(title);
@@ -52,27 +51,20 @@ public class LoginForm extends JFrame{
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for(int i = 0; i < accountsDatabase.length; i++)
-                {
-                    if(accountsDatabase[i].username.equals(txtUsername.getText()))
-                    {
-                        if(accountsDatabase[i].password.equals(pwdFieldPassword.getPassword().toString()))
-                        {
+                boolean matchNotFound = true;
+                    for(int i = 0; i < accountsDatabase.length; i++) {
+                        if (accountsDatabase[i].username.equals(txtUsername.getText()) && accountsDatabase[i].password.equals(new String (pwdFieldPassword.getPassword()))){
                             System.out.println("Match found!");
-                        }
-
-                        else
-                        {
-                            System.out.println("Match not found!");
+                            matchNotFound = false;
+                            break;
                         }
                     }
 
-                    else
+                    if(matchNotFound)
                     {
                         System.out.println("Match not found!");
                     }
                 }
-            }
         });
     }
     private void createUIComponents() {
