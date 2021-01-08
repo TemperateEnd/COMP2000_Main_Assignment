@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList.*;
 
 public class LoginForm extends JFrame{
     private JButton btnClear;
@@ -14,6 +13,7 @@ public class LoginForm extends JFrame{
     private JPanel txtUsernamePanel;
     private JPanel pwdFieldPasswordPanel;
     private JPanel buttonsPanel;
+    private JLabel lblTitle;
 
     static loginAccount[] accountsDatabase = new loginAccount[2];
 
@@ -25,7 +25,6 @@ public class LoginForm extends JFrame{
     {
         LoginForm page = new LoginForm("Admin Login");
         page.setVisible(true);
-        //System.out.println("Test");
 
         accountsDatabase[0] = userAdmin;
         accountsDatabase[1] = userReece;
@@ -36,6 +35,7 @@ public class LoginForm extends JFrame{
         super(title);
 
         txtUsername.setEditable(true);
+        pwdFieldPassword.setEditable(true);
         setContentPane(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension( 400, 400));
@@ -63,6 +63,13 @@ public class LoginForm extends JFrame{
                     if(matchNotFound)
                     {
                         System.out.println("Match not found!");
+                    }
+
+                    else
+                    {
+                        StockDatabaseForm nextPage = new StockDatabaseForm("nextPage");
+                        dispose();
+                        nextPage.setVisible(true);
                     }
                 }
         });
