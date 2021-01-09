@@ -52,6 +52,7 @@ public class StockDatabaseForm extends JFrame{
     public StockDatabaseForm(String title)
     {
         super(title);
+        setContentPane(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension( 500, 500));
         pack();

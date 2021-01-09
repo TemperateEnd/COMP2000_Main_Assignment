@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class LoginForm extends JFrame{
     private JButton btnClear;
@@ -17,17 +20,28 @@ public class LoginForm extends JFrame{
 
     static loginAccount[] accountsDatabase = new loginAccount[2];
 
-    static loginAccount userAdmin = new loginAccount("admin", "admin");
-    static loginAccount userReece = new loginAccount("rtarrant", "w4RN3veRch4nG35");
-
-
     public static void main (String[] args)
     {
         LoginForm page = new LoginForm("Admin Login");
         page.setVisible(true);
 
-        accountsDatabase[0] = userAdmin;
-        accountsDatabase[1] = userReece;
+        try {
+            Scanner input = new Scanner(new File("src//adminAccountsCreds.txt"));
+            input.useDelimiter("\n");
+
+            while(input.hasNext())
+            {
+                for(int i = 0; i < accountsDatabase.length;i++)
+                {
+                    String tempName = input.nextLine();
+                    String tempPassword = input.nextLine();
+                    accountsDatabase[i] = new loginAccount(tempName, tempPassword);
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public LoginForm(String title)
@@ -51,29 +65,34 @@ public class LoginForm extends JFrame{
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                boolean matchNotFound = true;
-                    for(int i = 0; i < accountsDatabase.length; i++) {
-                        if (accountsDatabase[i].username.equals(txtUsername.getText()) && accountsDatabase[i].password.equals(new String (pwdFieldPassword.getPassword()))){
-                            System.out.println("Match found!");
-                            matchNotFound = false;
-                            break;
-                        }
-                    }
-
-                    if(matchNotFound)
-                    {
-                        System.out.println("Match not found!");
-                    }
-
-                    else
-                    {
-                        StockDatabaseForm nextPage = new StockDatabaseForm("nextPage");
-                        dispose();
-                        nextPage.setVisible(true);
-                    }
+                AuthenticateUser(txtUsername.getText(), new String (pwdFieldPassword.getPassword()));
                 }
         });
     }
+
+    public void AuthenticateUser(String usernameInput, String passwordInput)
+    {
+        boolean matchNotFound = true;
+        for(int i = 0; i < accountsDatabase.length; i++) {
+            if (accountsDatabase[i].username.equals(usernameInput) && accountsDatabase[i].password.equals(passwordInput)){
+                matchNotFound = false;
+                break;
+            }
+        }
+
+        if(matchNotFound)
+        {
+            System.out.println("Match not found!");
+        }
+
+        else
+        {
+            //System.out.println("Match found!");
+            StockDatabaseForm nextPage = new StockDatabaseForm("nextPage");
+            nextPage.setVisible(true);
+        }
+    }
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
