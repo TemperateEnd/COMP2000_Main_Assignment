@@ -1,3 +1,3 @@
 public class stockDatabase {
-    stockItem[] itemsInStock;
+    stockItem[] itemsInStock = new stockItem[1];
 }

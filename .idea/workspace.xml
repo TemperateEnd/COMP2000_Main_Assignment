@@ -32,7 +32,7 @@
       <recent name="W:\University\Lecture notes\COMP2000\COMP2000_Main_Assignment\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HubScreen">
+  <component name="RunManager" selected="Application.StockDataBaseForm">
     <configuration name="HubScreen" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="checkoutHubForm" />
       <module name="COMP2000_Main_Assignment" />
@@ -47,9 +47,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StockDataBaseForm" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="stockDatabaseForm" />
+      <module name="COMP2000_Main_Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.LoginForm" />
       <item itemvalue="Application.HubScreen" />
+      <item itemvalue="Application.StockDataBaseForm" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,5 +70,36 @@
       <updated>1610236669879</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

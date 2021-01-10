@@ -73,8 +73,8 @@ public class adminLoginForm extends JFrame
             System.out.println("Match not found!");
         } else {
             System.out.println("Match found!");
-            //stockDatabaseForm dbPage = new stockDatabaseForm("nextPage");
-            //dbPage.setVisible(true);
+            stockDatabaseForm dbPage = new stockDatabaseForm("nextPage");
+            setVisible(false);
         }
     }
 }
