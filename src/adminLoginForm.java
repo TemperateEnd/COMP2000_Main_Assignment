@@ -21,7 +21,7 @@ public class adminLoginForm extends JFrame
         super(title);
         setContentPane(mainPanel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(550,1000);
         pack();
         setVisible(true);
         btnClear.addActionListener(new ActionListener() {

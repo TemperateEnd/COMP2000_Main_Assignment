@@ -25,13 +25,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="W:\University\Lecture notes\COMP2000\COMP2000_Main_Assignment\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HubScreen">
+    <configuration name="HubScreen" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="checkoutHubForm" />
+      <module name="COMP2000_Main_Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginForm" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="adminLoginForm" />
       <module name="COMP2000_Main_Assignment" />
@@ -39,6 +47,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.LoginForm" />
+      <item itemvalue="Application.HubScreen" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
