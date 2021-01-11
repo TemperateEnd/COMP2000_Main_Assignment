@@ -70,11 +70,22 @@ public class adminLoginForm extends JFrame
         }
 
         if (matchNotFound) {
-            System.out.println("Match not found!");
+            InvalidCredentials();
         } else {
-            System.out.println("Match found!");
-            stockDatabaseForm dbPage = new stockDatabaseForm("nextPage");
-            setVisible(false);
+            ValidCredentials();
         }
+    }
+
+    public void ValidCredentials()
+    {
+        stockDatabaseForm dbPage = new stockDatabaseForm("nextPage");
+        this.setVisible(false);
+    }
+
+    public void InvalidCredentials()
+    {
+        JOptionPane.showMessageDialog(null, "Error! Invalid username or password! Please try again!");
+        txtUsername.setText("");
+        pwdFieldAdminPass.setText("");
     }
 }
