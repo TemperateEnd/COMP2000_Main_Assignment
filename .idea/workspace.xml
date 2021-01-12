@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac77c129-f368-4faa-bad1-0da1e6749fa4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/loginAuthenticator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paymentOptionsForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paymentOptionsForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$6.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cardPaymentForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cardPaymentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cashPaymentForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cashPaymentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkoutForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkoutForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/testStockData.txt" afterDir="false" />
@@ -30,6 +38,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mr0zn48g7RLkcXysDFDcHxk1MO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +55,7 @@
       <recent name="W:\University\Lecture notes\COMP2000\COMP2000_Main_Assignment\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StockDataBaseForm">
+  <component name="RunManager" selected="Application.checkoutForm">
     <configuration name="HubScreen" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="checkoutHubForm" />
       <module name="COMP2000_Main_Assignment" />
@@ -66,7 +77,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="checkoutForm" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="checkoutForm" />
+      <module name="COMP2000_Main_Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.checkoutForm" />
       <item itemvalue="Application.LoginForm" />
       <item itemvalue="Application.HubScreen" />
       <item itemvalue="Application.StockDataBaseForm" />
@@ -100,8 +119,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="11" />
+          <line>175</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />

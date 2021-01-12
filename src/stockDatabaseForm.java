@@ -26,7 +26,7 @@ public class stockDatabaseForm extends JFrame{
     private JButton btnLogOut;
     private JButton btnRefresh;
 
-    static stockDatabase stockItems = new stockDatabase();
+    public static stockDatabase stockItems = new stockDatabase();
     static String source = "src//testStockData.txt";
 
     public int itemIndex;
@@ -144,18 +144,59 @@ public class stockDatabaseForm extends JFrame{
                 int newSize = stockItems.itemsInStock.length + 1;
                 stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, newSize);
                 stockItems.itemsInStock[newSize - 1] = new stockItem(txtItemName.getText(),Float.parseFloat(txtItemPrice.getText()), Long.parseLong(txtItemBarcode.getText()));
+
+                dataNum = stockItems.itemsInStock.length;
+
+                try {
+                    FileWriter f2 = new FileWriter(source,false);
+                    f2.write(dataNum + "\n");
+                    for(int i = 0; i < stockItems.itemsInStock.length; i++)
+                    {
+                        f2.write(stockItems.itemsInStock[i].itemName + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
+                    }
+                    f2.close();
+                } catch (IOException ex) {
+                    // TODO Auto-generated catch block
+                    ex.printStackTrace();
+                } catch (NumberFormatException ne){
+                    ne.printStackTrace();
+                }
             }
         });
+
         btnDeleteItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                stockItems.itemsInStock[itemIndex] = null;
 
-            }
-        });
-        btnRefresh.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+                for(int i = itemIndex + 1; i < stockItems.itemsInStock.length; i++)
+                {
+                    stockItems.itemsInStock[i-1] = stockItems.itemsInStock[i];
+                }
 
+                int newSize = stockItems.itemsInStock.length - 1;
+                stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, newSize);
+
+                dataNum = stockItems.itemsInStock.length;
+
+                try {
+                    FileWriter f2 = new FileWriter(source,false);
+                    f2.write(dataNum + "\n");
+                    for(int i = 0; i < stockItems.itemsInStock.length; i++)
+                    {
+                        f2.write(stockItems.itemsInStock[i].itemName + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
+                    }
+                    f2.close();
+                } catch (IOException ex) {
+                    // TODO Auto-generated catch block
+                    ex.printStackTrace();
+                } catch (NumberFormatException ne){
+                    ne.printStackTrace();
+                }
             }
         });
     }
