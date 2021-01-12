@@ -24,11 +24,13 @@ public class stockDatabaseForm extends JFrame{
     private JTextField txtItemBarcode;
     private JTable tblStockItems;
     private JButton btnLogOut;
+    private JButton btnRefresh;
 
     static stockDatabase stockItems = new stockDatabase();
     static String source = "src//testStockData.txt";
 
     public int itemIndex;
+    static int dataNum;
 
     public static void main(String[] args)
     {
@@ -39,13 +41,14 @@ public class stockDatabaseForm extends JFrame{
             input.useDelimiter("\n");
 
             while (input.hasNext()) {
-                for (int i = 0; i < stockItems.itemsInStock.length; i++) {
+                dataNum = Integer.parseInt(input.nextLine());
+                for (int i = 0; i < dataNum; i++) {
                     String tempName = input.nextLine();
                     float tempPrice = Float.parseFloat(input.nextLine());
                     int tempBarcode = Integer.parseInt(input.nextLine());
                     stockItems.itemsInStock[i] = new stockItem(tempName, tempPrice, tempBarcode);
 
-                    if (stockItems.itemsInStock.length <= 5) {
+                    if (stockItems.itemsInStock.length <= dataNum - 1) {
                         stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, stockItems.itemsInStock.length + 1);
                     }
                 }
@@ -108,14 +111,19 @@ public class stockDatabaseForm extends JFrame{
 
                 try {
                     FileWriter f2 = new FileWriter(source,false);
+                    f2.write(dataNum + "\n");
                     for(int i = 0; i < stockItems.itemsInStock.length; i++)
                     {
-                        f2.write(stockItems.itemsInStock[i].itemName + "\n" + stockItems.itemsInStock[i].itemPrice + "\n" + stockItems.itemsInStock[i].itemBarcode + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemName + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
                     }
                     f2.close();
                 } catch (IOException ex) {
                     // TODO Auto-generated catch block
                     ex.printStackTrace();
+                } catch (NumberFormatException ne){
+                    ne.printStackTrace();
                 }
 
                 /**DefaultTableModel newStockData = new DefaultTableModel();
@@ -139,6 +147,12 @@ public class stockDatabaseForm extends JFrame{
             }
         });
         btnDeleteItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        btnRefresh.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 

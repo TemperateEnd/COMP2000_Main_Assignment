@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ac77c129-f368-4faa-bad1-0da1e6749fa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/testStockData.txt" afterDir="false" />
     </list>
@@ -92,7 +100,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
-          <line>106</line>
+          <line>109</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
