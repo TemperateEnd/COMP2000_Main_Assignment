@@ -9,6 +9,8 @@ import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -24,6 +26,7 @@ public class stockDatabaseForm extends JFrame{
     private JButton btnLogOut;
 
     static stockDatabase stockItems = new stockDatabase();
+    static String source = "src//testStockData.txt";
 
     public int itemIndex;
 
@@ -32,7 +35,7 @@ public class stockDatabaseForm extends JFrame{
         stockDatabaseForm databaseForm = new stockDatabaseForm("databaseForm");
 
         try {
-            Scanner input = new Scanner(new File("src//testStockData.txt"));
+            Scanner input = new Scanner(new File(source));
             input.useDelimiter("\n");
 
             while (input.hasNext()) {
@@ -103,7 +106,19 @@ public class stockDatabaseForm extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 stockItems.itemsInStock[itemIndex] = new stockItem(txtItemName.getText(), Float.parseFloat(txtItemPrice.getText()),Long.parseLong(txtItemBarcode.getText()));
 
-                DefaultTableModel newStockData = new DefaultTableModel();
+                try {
+                    FileWriter f2 = new FileWriter(source,false);
+                    for(int i = 0; i < stockItems.itemsInStock.length; i++)
+                    {
+                        f2.write(stockItems.itemsInStock[i].itemName + "\n" + stockItems.itemsInStock[i].itemPrice + "\n" + stockItems.itemsInStock[i].itemBarcode + "\n");
+                    }
+                    f2.close();
+                } catch (IOException ex) {
+                    // TODO Auto-generated catch block
+                    ex.printStackTrace();
+                }
+
+                /**DefaultTableModel newStockData = new DefaultTableModel();
 
                 newStockData.addColumn("itemName");
                 newStockData.addColumn("itemPrice");
@@ -112,7 +127,7 @@ public class stockDatabaseForm extends JFrame{
                 for(int i =0;i<stockItems.itemsInStock.length;i++) {
                     newStockData.addRow(new Object[]{stockItems.itemsInStock[i].itemName, stockItems.itemsInStock[i].itemPrice, stockItems.itemsInStock[i].itemBarcode});
                 }
-                getTable().setModel(newStockData);
+                getTable().setModel(newStockData);**/
             }
         });
         btnAddItem.addActionListener(new ActionListener() {
