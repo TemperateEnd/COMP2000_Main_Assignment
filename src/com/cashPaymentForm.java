@@ -37,6 +37,10 @@ public class cashPaymentForm extends JFrame{
         pack();
         setVisible(true);
 
+        totalToPay = customerTotal;
+
+        basket = customerBasket;
+
         lblTotalToPay.setText(String.valueOf(totalToPay));
         lblAmountPaid.setText(String.valueOf(amountPaid));
 

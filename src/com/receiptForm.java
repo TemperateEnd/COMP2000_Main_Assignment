@@ -35,8 +35,14 @@ public class receiptForm extends JFrame{
         pack();
         setVisible(true);
 
+        basket = itemsToRemoveFromDatabase;
+        totalCost = transactionTotal;
+        changeGiven = changeToGive;
+
         cardPaymentReceived = paidViaCard;
         stockItems = databaseToUpdate;
+
+        SwingWorkerLoader();
 
         btnReturn.addActionListener(new ActionListener() {
             @Override
@@ -50,16 +56,14 @@ public class receiptForm extends JFrame{
     public static void main(String[] args)
     {
         receiptForm customerReceipt = new receiptForm("receipt", basket, totalCost, changeGiven, cardPaymentReceived,stockItems);
-
-        customerReceipt.SwingWorkerLoader();
     }
 
     void SwingWorkerLoader()
     {
         new SwingWorker<Void, Object>(){
             String receiptString;
-            final String totalCostFormat = String.format("%.2f", String.valueOf(totalCost));
-            final String changeGivenFormat = String.format("%.2f",String.valueOf(changeGiven));
+            String totalCostFormat = String.format(String.valueOf(totalCost), "%.2f");
+            String changeGivenFormat = String.format(String.valueOf(changeGiven), "%.2f");
             @Override
             protected Void doInBackground() throws Exception{
                 txtPanelReceipt.setText("Printing Receipt");
