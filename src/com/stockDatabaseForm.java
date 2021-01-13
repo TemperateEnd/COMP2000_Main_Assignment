@@ -23,7 +23,6 @@ public class stockDatabaseForm extends JFrame{
     private JTextField txtItemBarcode;
     private JTable tblStockItems;
     private JButton btnLogOut;
-    private JButton btnRefresh;
 
     public static stockDatabase stockItems = new stockDatabase();
     static String source = "src//testStockData.txt";
@@ -65,7 +64,8 @@ public class stockDatabaseForm extends JFrame{
                     stockItems.itemsInStock[i] = new stockItem(tempName, tempPrice, tempBarcode, tempNum);
 
                     if(i < dataNum - 1) {
-                        stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, stockItems.itemsInStock.length + 1);
+                        stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock,
+                                stockItems.itemsInStock.length + 1);
                     }
                 }
             }
@@ -78,7 +78,10 @@ public class stockDatabaseForm extends JFrame{
             stockData.addColumn("itemNum");
 
             for(int i =0;i<stockItems.itemsInStock.length;i++) {
-                stockData.addRow(new Object[]{stockItems.itemsInStock[i].itemName, stockItems.itemsInStock[i].itemPrice, stockItems.itemsInStock[i].itemBarcode, stockItems.itemsInStock[i].itemNum});
+                stockData.addRow(new Object[]{stockItems.itemsInStock[i].itemName,
+                        stockItems.itemsInStock[i].itemPrice,
+                        stockItems.itemsInStock[i].itemBarcode,
+                        stockItems.itemsInStock[i].itemNum});
             }
             getTable().setModel(stockData);
 
@@ -113,7 +116,10 @@ public class stockDatabaseForm extends JFrame{
         btnEditItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stockItems.itemsInStock[itemIndex] = new stockItem(txtItemName.getText(), Float.parseFloat(txtItemPrice.getText()),Long.parseLong(txtItemBarcode.getText()), stockItems.itemsInStock[itemIndex].itemNum);
+                stockItems.itemsInStock[itemIndex] = new stockItem(txtItemName.getText(),
+                        Float.parseFloat(txtItemPrice.getText()),
+                        Long.parseLong(txtItemBarcode.getText()),
+                        stockItems.itemsInStock[itemIndex].itemNum);
 
                 try {
                     FileWriter f2 = new FileWriter(source,false);
@@ -141,7 +147,10 @@ public class stockDatabaseForm extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 int newSize = stockItems.itemsInStock.length + 1;
                 stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, newSize);
-                stockItems.itemsInStock[newSize - 1] = new stockItem(txtItemName.getText(),Float.parseFloat(txtItemPrice.getText()), Long.parseLong(txtItemBarcode.getText()), 1);
+                stockItems.itemsInStock[newSize - 1] = new stockItem(txtItemName.getText(),
+                        Float.parseFloat(txtItemPrice.getText()),
+                        Long.parseLong(txtItemBarcode.getText()),
+                        1);
 
                 dataNum = stockItems.itemsInStock.length;
 
@@ -168,7 +177,10 @@ public class stockDatabaseForm extends JFrame{
         btnDeleteItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                stockItems.itemsInStock[itemIndex] = new stockItem(txtItemName.getText(),Float.parseFloat(txtItemPrice.getText()), Long.parseLong(txtItemBarcode.getText()), (stockItems.itemsInStock[itemIndex].itemNum - 1));
+                stockItems.itemsInStock[itemIndex] = new stockItem(txtItemName.getText(),
+                        Float.parseFloat(txtItemPrice.getText()),
+                        Long.parseLong(txtItemBarcode.getText()),
+                        (stockItems.itemsInStock[itemIndex].itemNum - 1));
 
                 if(stockItems.itemsInStock[itemIndex].itemNum == 0)
                 {

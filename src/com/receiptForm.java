@@ -26,7 +26,8 @@ public class receiptForm extends JFrame{
 
     static String source = "src//testStockData.txt";
 
-    public receiptForm(String title, ArrayList<stockItem> itemsToRemoveFromDatabase, float transactionTotal, float changeToGive, boolean paidViaCard, stockDatabase databaseToUpdate)
+    public receiptForm(String title, ArrayList<stockItem> itemsToRemoveFromDatabase, float
+            transactionTotal, float changeToGive, boolean paidViaCard, stockDatabase databaseToUpdate)
     {
         super(title);
         setContentPane(mainPanel);
@@ -58,11 +59,13 @@ public class receiptForm extends JFrame{
 
     public static void main(String[] args)
     {
-        receiptForm customerReceipt = new receiptForm("receipt", basket, totalCost, changeGiven, cardPaymentReceived,stockItems);
+        receiptForm customerReceipt = new receiptForm("receipt", basket, totalCost, changeGiven,
+                cardPaymentReceived,stockItems);
     }
 
     /**This method uses threading to generate a receipt to display to the end user what
-     * they have bought and what they have paid for it as well as what change they get if they pay too much in cash **/
+     * they have bought and what they have paid for it as well as what change they get if
+     * they pay too much in cash **/
     void SwingWorkerLoader()
     {
         new SwingWorker<Void, Object>(){
@@ -87,7 +90,8 @@ public class receiptForm extends JFrame{
                         receiptString += basket.get(i).itemName + ": £" + basket.get(i).itemPrice + "\n";
                     }
 
-                    receiptString += "\n \n \n \n \n ------------ \n \n Total cost: £" + totalCostFormat + "\n\n\n Verified by card for amount: £" + totalCostFormat;
+                    receiptString += "\n \n \n \n \n ------------ \n \n Total cost: £" + totalCostFormat +
+                            "\n\n\n Verified by card for amount: £" + totalCostFormat;
                 }
 
                 else if (cardPaymentReceived == false)
@@ -99,7 +103,8 @@ public class receiptForm extends JFrame{
                         receiptString += basket.get(i).itemName + ": £" + basket.get(i).itemPrice + "\n";
                     }
 
-                    receiptString += "\n \n \n \n \n ------------ \n \n Total cost: £" + totalCostFormat + "\n\n\n Changed given: £" + changeGivenFormat;
+                    receiptString += "\n \n \n \n \n ------------ \n \n Total cost: £" +
+                            totalCostFormat + "\n\n\n Changed given: £" + changeGivenFormat;
                 }
 
                 txtPanelReceipt.setText(receiptString);

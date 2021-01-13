@@ -55,7 +55,8 @@ public class adminLoginForm extends JFrame
             }
         });
 
-        //On button press, invokes a method and passes the values stored in the textfields as parameters within the method
+        /**On button press, invokes a method and passes the values stored in the
+        textfields as parameters within the method**/
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -95,10 +96,12 @@ public class adminLoginForm extends JFrame
         this.setVisible(false);
     }
 
-    //Invoked when matchNotFound is true; Displays a messagebox to inform the user that they have entered invalid credentials
+    /**Invoked when matchNotFound is true; Displays a messagebox to inform the
+    user that they have entered invalid credentials **/
     public void InvalidCredentials()
     {
-        JOptionPane.showMessageDialog(null, "Error! Invalid username or password! Please try again!");
+        JOptionPane.showMessageDialog(null, "Error! Invalid username or " +
+                "password! Please try again!");
         txtUsername.setText("");
         pwdFieldAdminPass.setText("");
     }

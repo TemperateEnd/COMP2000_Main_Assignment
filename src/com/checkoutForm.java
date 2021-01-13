@@ -53,7 +53,8 @@ public class checkoutForm extends JFrame{
                     int tempNum = Integer.parseInt(input.nextLine());
                     stockData.itemsInStock[i] = new stockItem(tempName, tempPrice, tempBarcode, tempNum);
                     if(i < dataNum - 1) {
-                        stockData.itemsInStock = Arrays.copyOf(stockData.itemsInStock, stockData.itemsInStock.length + 1);
+                        stockData.itemsInStock = Arrays.copyOf(stockData.itemsInStock,
+                                stockData.itemsInStock.length + 1);
                     }
                 }
             }
@@ -66,7 +67,8 @@ public class checkoutForm extends JFrame{
         btnCheckout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                paymentOptionsForm paymentForm = new paymentOptionsForm("paymentForm", basket, runningTotal, stockData);
+                paymentOptionsForm paymentForm = new paymentOptionsForm("paymentForm", basket,
+                        runningTotal, stockData);
                 setVisible(false);
             }
         });

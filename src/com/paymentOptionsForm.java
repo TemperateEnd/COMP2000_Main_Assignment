@@ -15,7 +15,8 @@ public class paymentOptionsForm extends  JFrame{
     public static ArrayList<stockItem> transactionBasket;
     public static stockDatabase dataStockItems;
 
-    public paymentOptionsForm (String title, ArrayList<stockItem> itemsList, float customerTotal, stockDatabase stockData)
+    public paymentOptionsForm (String title, ArrayList<stockItem> itemsList,
+                               float customerTotal, stockDatabase stockData)
     {
         super(title);
         setContentPane(mainPanel);
@@ -27,13 +28,15 @@ public class paymentOptionsForm extends  JFrame{
         transactionBasket = itemsList;
         dataStockItems = stockData;
 
-        lblTotal.setText("Your total is £" + String.format(String.valueOf(customerTotal), "%.2f") + ".\n\n How would you like to pay?");
+        lblTotal.setText("Your total is £" + String.format(String.valueOf(customerTotal), "%.2f") +
+                ".\n\n How would you like to pay?");
 
         /**Opens the cash payment form and passes the basket, total and stockDatabase to the form**/
         btnCash.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cashPaymentForm cashPayment = new cashPaymentForm("paying via cash", transactionBasket, transactionTotal, dataStockItems);
+                cashPaymentForm cashPayment = new cashPaymentForm("paying via cash", transactionBasket,
+                        transactionTotal, dataStockItems);
                 setVisible(false);
             }
         });
@@ -43,7 +46,8 @@ public class paymentOptionsForm extends  JFrame{
         btnCard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                receiptForm cardPayment = new receiptForm("paying via card", transactionBasket, transactionTotal, 0.0f, true, dataStockItems);
+                receiptForm cardPayment = new receiptForm("paying via card", transactionBasket,
+                        transactionTotal, 0.0f, true, dataStockItems);
                 setVisible(false);
             }
         });
@@ -51,6 +55,7 @@ public class paymentOptionsForm extends  JFrame{
 
     public static void main(String[] args)
     {
-        paymentOptionsForm form = new paymentOptionsForm("payment", transactionBasket, transactionTotal, dataStockItems);
+        paymentOptionsForm form = new paymentOptionsForm("payment", transactionBasket,
+                transactionTotal, dataStockItems);
     }
 }

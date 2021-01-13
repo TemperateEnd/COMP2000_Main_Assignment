@@ -51,7 +51,8 @@ public class cashPaymentForm extends JFrame{
          btnConfirmPayment.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                receiptForm receipt = new receiptForm("customerReceipt", basket, totalToPay, (amountPaid - totalToPay), false, stockData);
+                receiptForm receipt = new receiptForm("customerReceipt", basket, totalToPay,
+                        (amountPaid - totalToPay), false, stockData);
                 setVisible(false);
             }
         });
