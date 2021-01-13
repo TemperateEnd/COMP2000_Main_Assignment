@@ -46,7 +46,9 @@ public class cashPaymentForm extends JFrame{
 
         stockData = databaseParameter;
 
-        btnConfirmPayment.addActionListener(new ActionListener() {
+        /**Opens the receipt form and passes the basket, total, change and stockDatabase while declaring that the
+        boolean that checks if the user has paid via card is false**/
+         btnConfirmPayment.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 receiptForm receipt = new receiptForm("customerReceipt", basket, totalToPay, (amountPaid - totalToPay), false, stockData);
@@ -54,6 +56,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+         //Adds 2.0 to the amountPaid value on button press
         btn£2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -62,6 +65,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.01 to the amountPaid value on button press
         btn1p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,6 +74,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.02 to the amountPaid value on button press
         btn2p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,6 +83,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.05 to the amountPaid value on button press
         btn5p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,6 +92,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.1 to the amountPaid value on button press
         btn10p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -94,6 +101,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.2 to the amountPaid value on button press
         btn20p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -102,6 +110,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 1.0 to the amountPaid value on button press
         btn£1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -110,6 +119,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 0.5 to the amountPaid value on button press
         btn50p.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,6 +128,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 5.0 to the amountPaid value on button press
         btn£5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -126,6 +137,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 10.0 to the amountPaid value on button press
         btn£10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -134,6 +146,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 20.0 to the amountPaid value on button press
         btn£20.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -142,6 +155,7 @@ public class cashPaymentForm extends JFrame{
             }
         });
 
+        //Adds 50.0 to the amountPaid value on button press
         btn£50.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

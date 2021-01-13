@@ -29,6 +29,7 @@ public class paymentOptionsForm extends  JFrame{
 
         lblTotal.setText("Your total is £" + String.format(String.valueOf(customerTotal), "%.2f") + ".\n\n How would you like to pay?");
 
+        /**Opens the cash payment form and passes the basket, total and stockDatabase to the form**/
         btnCash.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,6 +37,9 @@ public class paymentOptionsForm extends  JFrame{
                 setVisible(false);
             }
         });
+
+        /** Opens the receiptForm and passes the basket, total, stockDatabase and change while
+         * declaring true on the boolean that checks if the customer has paid via card**/
         btnCard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

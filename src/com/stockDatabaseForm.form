@@ -23,7 +23,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="This is where the name of the selected item is displayed"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="aa5a8" class="javax.swing.JTextField" binding="txtItemPrice">
@@ -33,7 +33,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="This is where the price of the selected item is displayed"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="e0f2" class="javax.swing.JTextField" binding="txtItemBarcode">
@@ -43,7 +43,7 @@
           </grid>
         </constraints>
         <properties>
-          <text value="This is where the barcode of the selected item is displayed"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="651f9" class="javax.swing.JTable" binding="tblStockItems">

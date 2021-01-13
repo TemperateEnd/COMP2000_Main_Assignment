@@ -50,6 +50,7 @@ public class stockDatabaseForm extends JFrame{
         setVisible(true);
         pack();
 
+        //Reads data from testStock.txt and uses it to create new objects to populate the stock database
         try {
             Scanner input = new Scanner(new File(source));
             input.useDelimiter("\n");
@@ -97,6 +98,7 @@ public class stockDatabaseForm extends JFrame{
             }
         });
 
+        //Logs the user out and moves them to the hub form on button press
         btnLogOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -105,6 +107,9 @@ public class stockDatabaseForm extends JFrame{
             }
         });
 
+        /**Takes the item selected in the datatable. A new object is created in the array where the selected item was
+         * positioned using the values inside the text fields containing the item name, price and barcode before writing the
+         * entire array to the stock data text file**/
         btnEditItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -126,19 +131,11 @@ public class stockDatabaseForm extends JFrame{
                 } catch (NumberFormatException ne){
                     ne.printStackTrace();
                 }
-
-                /**DefaultTableModel newStockData = new DefaultTableModel();
-
-                newStockData.addColumn("itemName");
-                newStockData.addColumn("itemPrice");
-                newStockData.addColumn("itemBarcode");
-
-                for(int i =0;i<stockItems.itemsInStock.length;i++) {
-                    newStockData.addRow(new Object[]{stockItems.itemsInStock[i].itemName, stockItems.itemsInStock[i].itemPrice, stockItems.itemsInStock[i].itemBarcode});
-                }
-                getTable().setModel(newStockData);**/
             }
         });
+
+        /** Creates a new object using the input entered by the user in the textfields and adds it to the array
+         * before writing the newly resized array to the text file**/
         btnAddItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -167,6 +164,7 @@ public class stockDatabaseForm extends JFrame{
             }
         });
 
+        /** Deletes the selected item and shrinks the array before writing it to the text file**/
         btnDeleteItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

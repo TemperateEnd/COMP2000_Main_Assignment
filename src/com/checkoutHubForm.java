@@ -21,6 +21,7 @@ public class checkoutHubForm extends JFrame{
         pack();
         setVisible(true);
 
+        //Takes the user to the Admin Login Screen if the user clicks on the label
         lblTitle.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -29,6 +30,8 @@ public class checkoutHubForm extends JFrame{
                 setVisible(false);
             }
         });
+
+        //Takes the user to the checkout kiosk screen if the user presses this button
         btnCheckout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

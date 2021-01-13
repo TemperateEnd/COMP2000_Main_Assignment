@@ -45,6 +45,7 @@ public class receiptForm extends JFrame{
         dataNum = (stockItems.itemsInStock.length + 1);
         SwingWorkerLoader();
 
+        //On button press, returns the user to the hub form
         btnReturn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,6 +61,8 @@ public class receiptForm extends JFrame{
         receiptForm customerReceipt = new receiptForm("receipt", basket, totalCost, changeGiven, cardPaymentReceived,stockItems);
     }
 
+    /**This method uses threading to generate a receipt to display to the end user what
+     * they have bought and what they have paid for it as well as what change they get if they pay too much in cash **/
     void SwingWorkerLoader()
     {
         new SwingWorker<Void, Object>(){
@@ -101,6 +104,11 @@ public class receiptForm extends JFrame{
 
                 txtPanelReceipt.setText(receiptString);
 
+                /** Iterates through the basket ArrayList and the
+                 * stockItems array in the stockDatabase, taking all the items in the
+                 * basket and decrementing the item number for each item if
+                 * the item number is higher than 1, at which point the item will be deleted and
+                 * the stockItem array will shrink**/
                 for(int i = 0; i < basket.size();i++) {
                     for (int j = 0; j < stockItems.itemsInStock.length; j++) {
                         if (basket.get(i) == stockItems.itemsInStock[j]) {
@@ -122,6 +130,7 @@ public class receiptForm extends JFrame{
                     }
                 }
 
+                /** Takes the stock item array and writes it to the testStockData text file**/
                 try {
                     FileWriter f2 = new FileWriter(source,false);
                     f2.write(dataNum + "\n");

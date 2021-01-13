@@ -39,7 +39,7 @@ public class checkoutForm extends JFrame{
         pack();
         setVisible(true);
 
-
+        // Takes the testStockData.txt file and writes it into the stockItems array
         try {
             Scanner input = new Scanner(new File(source));
             input.useDelimiter("\n");
@@ -61,6 +61,8 @@ public class checkoutForm extends JFrame{
             e.printStackTrace();
         }
 
+        /** On button press, opens the payment option form and passes the basket,
+         * running total and stockDatabase to the form**/
         btnCheckout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,6 +71,7 @@ public class checkoutForm extends JFrame{
             }
         });
 
+        //On button press, takes the barcode entered by the user and puts the item into the cart
         btnConfirmBarcode.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
