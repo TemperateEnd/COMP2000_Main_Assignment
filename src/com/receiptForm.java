@@ -42,11 +42,13 @@ public class receiptForm extends JFrame{
         cardPaymentReceived = paidViaCard;
         stockItems = databaseToUpdate;
 
+        dataNum = (stockItems.itemsInStock.length + 1);
         SwingWorkerLoader();
 
         btnReturn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 checkoutHubForm hubForm = new checkoutHubForm("returnToHub");
                 setVisible(false);
             }
@@ -99,12 +101,23 @@ public class receiptForm extends JFrame{
 
                 txtPanelReceipt.setText(receiptString);
 
-                for(int i = 0; i < stockItems.itemsInStock.length;i++) {
-                    for (int j = 0; j < basket.size(); j++) {
-                        if (stockItems.itemsInStock[i].itemName == basket.get(j).itemName) {
-                            stockItems.itemsInStock[i] = null;
-                            dataNum--;
-                            stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, dataNum);
+                for(int i = 0; i < basket.size();i++) {
+                    for (int j = 0; j < stockItems.itemsInStock.length; j++) {
+                        if (basket.get(i) == stockItems.itemsInStock[j]) {
+
+                            if(stockItems.itemsInStock[j].itemNum == 1)
+                            {
+                                stockItems.itemsInStock[j] = null;
+                                dataNum--;
+                                stockItems.itemsInStock = Arrays.copyOf(stockItems.itemsInStock, dataNum);
+                            }
+
+                            else
+                            {
+                                stockItems.itemsInStock[j].itemNum--;
+                            }
+
+                            basket.remove(i);
                         }
                     }
                 }
@@ -117,6 +130,7 @@ public class receiptForm extends JFrame{
                         f2.write(stockItems.itemsInStock[i].itemName + "\n");
                         f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
                         f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemNum + "\n");
                     }
                     f2.close();
                 } catch (IOException ex) {

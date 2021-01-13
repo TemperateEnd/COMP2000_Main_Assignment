@@ -21,35 +21,13 @@ public class checkoutForm extends JFrame{
 
     static stockDatabase stockData = new stockDatabase();
     static int dataNum;
-    static String source = "src//testStockData.txt";
+    static String source = "src\\testStockData.txt";
     public float runningTotal;
     ArrayList<stockItem> basket = new ArrayList<>();
 
     public static void main(String[] args)
     {
         checkoutForm newForm = new checkoutForm("newForm");
-
-        try {
-            Scanner input = new Scanner(new File(source));
-            input.useDelimiter("\n");
-
-            while (input.hasNext()) {
-                dataNum = Integer.parseInt(input.nextLine());
-                for (int i = 0; i < dataNum; i++) {
-                    String tempName = input.nextLine();
-                    float tempPrice = Float.parseFloat(input.nextLine());
-                    int tempBarcode = Integer.parseInt(input.nextLine());
-                    stockData.itemsInStock[i] = new stockItem(tempName, tempPrice, tempBarcode);
-
-                    if (stockData.itemsInStock.length <= dataNum - 1) {
-                        stockData.itemsInStock = Arrays.copyOf(stockData.itemsInStock, stockData.itemsInStock.length + 1);
-                    }
-                }
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public checkoutForm(String title){
@@ -60,6 +38,28 @@ public class checkoutForm extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setVisible(true);
+
+
+        try {
+            Scanner input = new Scanner(new File(source));
+            input.useDelimiter("\n");
+
+            while (input.hasNext()) {
+                dataNum = Integer.parseInt(input.nextLine());
+                for (int i = 0; i < dataNum; i++) {
+                    String tempName = input.nextLine();
+                    float tempPrice = Float.parseFloat(input.nextLine());
+                    long tempBarcode = Long.parseLong(input.nextLine());
+                    int tempNum = Integer.parseInt(input.nextLine());
+                    stockData.itemsInStock[i] = new stockItem(tempName, tempPrice, tempBarcode, tempNum);
+                    if(i < dataNum - 1) {
+                        stockData.itemsInStock = Arrays.copyOf(stockData.itemsInStock, stockData.itemsInStock.length + 1);
+                    }
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         btnCheckout.addActionListener(new ActionListener() {
             @Override

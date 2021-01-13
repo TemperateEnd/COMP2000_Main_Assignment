@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="paymentOptions" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.paymentOptionsForm" />
+    <module name="COMP2000_Main_Assignment" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

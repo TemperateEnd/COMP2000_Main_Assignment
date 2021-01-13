@@ -27,6 +27,23 @@ public class adminLoginForm extends JFrame
         setSize(550,1000);
         pack();
         setVisible(true);
+
+        try {
+            Scanner input = new Scanner(new File("src\\adminAccountsCreds.txt"));
+            input.useDelimiter("\n");
+
+            while (input.hasNext()) {
+                for (int i = 0; i < accountsDatabase.length; i++) {
+                    String tempName = input.nextLine();
+                    String tempPassword = input.nextLine();
+                    accountsDatabase[i] = new loginAccount(tempName, tempPassword);
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
         btnClear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,22 +62,6 @@ public class adminLoginForm extends JFrame
     public static void main (String[] args)
     {
         adminLoginForm page = new adminLoginForm("loginPage");
-
-        try {
-            Scanner input = new Scanner(new File("src//adminAccountsCreds.txt"));
-            input.useDelimiter("\n");
-
-            while (input.hasNext()) {
-                for (int i = 0; i < accountsDatabase.length; i++) {
-                    String tempName = input.nextLine();
-                    String tempPassword = input.nextLine();
-                    accountsDatabase[i] = new loginAccount(tempName, tempPassword);
-                }
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public void AuthenticateUser(String usernameInput, String passwordInput) {
