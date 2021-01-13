@@ -2,25 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac77c129-f368-4faa-bad1-0da1e6749fa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/loginAuthenticator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paymentOptionsForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/paymentOptionsForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/receiptForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/testStockData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cardPaymentForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cardPaymentForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/cashPaymentForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cashPaymentForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkoutForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkoutForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkoutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkoutForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stockDatabaseForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/testStockData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COMP2000_Main_Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP2000_Main_Assignment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/adminLoginForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/adminLoginForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/adminLoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/cardPaymentForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/cashPaymentForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutHubForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutHubForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/checkoutHubForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/loginAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/loginAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/paymentOptionsForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/paymentOptionsForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/paymentOptionsForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/receiptForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockDatabaseForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP2000_Main_Assignment/stockItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adminLoginForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adminLoginForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/adminLoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adminLoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/receiptForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cardPaymentForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cashPaymentForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cashPaymentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cashPaymentForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/checkoutForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/checkoutForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutHubForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/checkoutHubForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkoutHubForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/checkoutHubForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/loginAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginAuthenticator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paymentOptionsForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paymentOptionsForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/paymentOptionsForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/paymentOptionsForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/receiptForm.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/receiptForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stockDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stockDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stockDatabaseForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stockDatabaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stockDatabaseForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stockItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stockItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,45 +75,62 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SetExercise4" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\University\Lecture notes\COMP2000\COMP2000_Main_Assignment\src\com" />
       <recent name="W:\University\Lecture notes\COMP2000\COMP2000_Main_Assignment\src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.checkoutForm">
     <configuration name="HubScreen" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="checkoutHubForm" />
+      <option name="MAIN_CLASS_NAME" value="com.checkoutHubForm" />
       <module name="COMP2000_Main_Assignment" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="LoginForm" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="adminLoginForm" />
+      <option name="MAIN_CLASS_NAME" value="com.adminLoginForm" />
       <module name="COMP2000_Main_Assignment" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="StockDataBaseForm" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="stockDatabaseForm" />
+      <option name="MAIN_CLASS_NAME" value="com.stockDatabaseForm" />
       <module name="COMP2000_Main_Assignment" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="checkoutForm" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="checkoutForm" />
+      <option name="MAIN_CLASS_NAME" value="com.checkoutForm" />
+      <module name="COMP2000_Main_Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="paymentOptions" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.paymentOptionsForm" />
       <module name="COMP2000_Main_Assignment" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.paymentOptions" />
       <item itemvalue="Application.checkoutForm" />
       <item itemvalue="Application.LoginForm" />
       <item itemvalue="Application.HubScreen" />
@@ -118,7 +164,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/stockDatabaseForm.java</url>
+          <url>file://$PROJECT_DIR$/src/com/stockDatabaseForm.java</url>
           <line>175</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
