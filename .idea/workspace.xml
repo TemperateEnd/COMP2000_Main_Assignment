@@ -8,9 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ac77c129-f368-4faa-bad1-0da1e6749fa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP2000_Main_Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP2000_Main_Assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/COMP2000_Main_Assignment_jar/COMP2000_Main_Assignment.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/COMP2000_Main_Assignment_jar/COMP2000_Main_Assignment.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/adminLoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/adminLoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stockDatabaseForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stockDatabaseForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testStockData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/testStockData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +102,11 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="12" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/stockDatabaseForm.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

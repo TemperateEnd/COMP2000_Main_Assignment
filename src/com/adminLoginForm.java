@@ -92,7 +92,7 @@ public class adminLoginForm extends JFrame
     public void ValidCredentials()
     {
         stockDatabaseForm dbPage = new stockDatabaseForm("nextPage");
-        this.setVisible(false);
+        setVisible(false);
     }
 
     /**Invoked when matchNotFound is true; Displays a messagebox to inform the

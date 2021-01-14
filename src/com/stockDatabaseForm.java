@@ -129,6 +129,7 @@ public class stockDatabaseForm extends JFrame{
                         f2.write(stockItems.itemsInStock[i].itemName + "\n");
                         f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
                         f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemNum + "\n");
                     }
                     f2.close();
                 } catch (IOException ex) {
@@ -162,6 +163,7 @@ public class stockDatabaseForm extends JFrame{
                         f2.write(stockItems.itemsInStock[i].itemName + "\n");
                         f2.write(stockItems.itemsInStock[i].itemPrice + "\n");
                         f2.write(stockItems.itemsInStock[i].itemBarcode + "\n");
+                        f2.write(stockItems.itemsInStock[i].itemNum + "\n");
                     }
                     f2.close();
                 } catch (IOException ex) {

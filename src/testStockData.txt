@@ -1,4 +1,4 @@
-4
+3
 Cheddar Cheese 500g
 1.5
 12136151
@@ -6,8 +6,8 @@ Cheddar Cheese 500g
 Kopparberg Mixed Berries 4pk
 5.99
 81511241
-2
+12
 Semi-skimmed milk 4pt
 1.1
 11011231
-5
+10
